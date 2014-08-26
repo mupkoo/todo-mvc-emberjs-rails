@@ -11,9 +11,12 @@
     </section>
 
     <footer id="footer">
-        <span id="todo-count">
-            <strong>{{ remainingCount }}</strong> {{ inflection }} left
-        </span>
+        {{#if hasTodos}}
+            <span id="todo-count">
+                <strong>{{ remainingCount }}</strong> {{ inflection }} left
+            </span>
+        {{/if}}
+
         <ul id="filters">
             <li>
                 {{#link-to 'todos.index' activeClass="selected"}}All{{/link-to}}
