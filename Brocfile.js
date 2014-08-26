@@ -17,4 +17,7 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+// Add localstorage adapter
+app.import("vendor/ember-localstorage-adapter/localstorage_adapter.js");
+
 module.exports = app.toTree();
