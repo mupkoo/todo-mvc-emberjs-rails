@@ -2,10 +2,6 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
 
-    hasTodos: function () {
-        return this.get('length') > 0;
-    }.property('length'),
-
     remainingCount: function () {
         return this.filterBy('isCompleted', false).get('length');
     }.property('@each.isCompleted'),

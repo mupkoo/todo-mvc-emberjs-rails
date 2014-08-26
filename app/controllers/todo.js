@@ -5,7 +5,7 @@ export default Ember.ObjectController.extend({
     bufferTitle: '',
 
     isCompleted: function (key, value) {
-        var model = this.get('model');
+        var model = this.get('content');
 
         if (value === undefined) {
             return model.get('isCompleted');
@@ -15,7 +15,7 @@ export default Ember.ObjectController.extend({
 
             return value;
         }
-    }.property('isCompleted'),
+    }.property('content.isCompleted'),
 
     actions: {
         editTodo: function () {
