@@ -554,3 +554,32 @@ hr {
         margin: 130px auto 40px auto;
     }
 }
+
+/* Custom */
+.login {
+    padding: 75px 0;
+}
+
+.login input,
+.login button {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    padding: 7px 10px;
+    font-size: 16px;
+}
+
+.login button {
+    border: 1px solid #6c615c;
+    cursor: pointer;
+    color: white;
+    background: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+}
+
+.login button:active {
+    box-shadow: 0 2px 8px #666 inset;
+}
