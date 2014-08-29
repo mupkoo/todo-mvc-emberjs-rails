@@ -1,1 +1,10 @@
+<nav>
+    {{#if controllers.currentUser.isSignedIn}}
+        <a href="#">{{ controllers.currentUser.email }}</a>
+        <a href="#">Logout</a>
+    {{else}}
+        {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
+</nav>
+
 {{outlet}}
