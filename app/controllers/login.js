@@ -41,6 +41,11 @@ export default Ember.Controller.extend({
                     }
                 });
             }
+        },
+
+        logout: function () {
+            this.set('token', null);
+            this.set('controllers.currentUser.content', null);
         }
     }
 });

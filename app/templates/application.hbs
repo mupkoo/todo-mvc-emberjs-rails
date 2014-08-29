@@ -2,7 +2,7 @@
     {{#if controllers.currentUser.isSignedIn}}
         <a href="#">{{ controllers.currentUser.email }}</a>
         &bull;
-        <a href="#">Logout</a>
+        {{link-to 'Logout' 'logout'}}
     {{else}}
         {{#link-to 'login'}}Login{{/link-to}}
         &bull;

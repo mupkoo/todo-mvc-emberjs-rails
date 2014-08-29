@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
     this.route('login');
+    this.route('logout');
 
     this.resource('todos', { path: '/' }, function () {
         this.route('active');
