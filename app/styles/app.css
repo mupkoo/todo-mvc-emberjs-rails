@@ -596,3 +596,13 @@ hr {
     padding: 5px 0;
     text-align: center;
 }
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    color: #a6a6a6;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
