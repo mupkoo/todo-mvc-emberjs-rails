@@ -583,3 +583,16 @@ hr {
 .login button:active {
     box-shadow: 0 2px 8px #666 inset;
 }
+
+.login .error {
+    box-sizing: border-box;
+    margin: 0;
+    background: #B26767;
+    border: 1px solid #B93838;
+    border-radius: 2px;
+    color: white;
+    width: 60%;
+    margin: -31px auto 0;
+    padding: 5px 0;
+    text-align: center;
+}

@@ -4,6 +4,10 @@
     </header>
 
     <section class="login">
+        {{#if errorMessage}}
+            <p class="error">{{ errorMessage }}</p>
+        {{/if}}
+
         <form {{ action "login" on="submit" }}>
             {{ input type="text" value=email placeholder="i.am@awesome.com" }}
             {{ input type="password" value=password placeholder="my secret password" }}
