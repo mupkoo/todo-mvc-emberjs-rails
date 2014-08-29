@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
 
+    needs: [ 'currentUser' ],
+
     // Initial data
     model: {
        token: localStorage.token,
@@ -32,7 +34,7 @@ export default Ember.ObjectController.extend({
                     if (res.success) {
 
                         self.set('token', res.token);
-                        // self.controllerFor('currentUser').set('content', res.user);
+                        self.set('controllers.currentUser.content', res.user);
 
                         self.transitionToRoute('todos');
 
