@@ -1,9 +1,12 @@
 <nav>
     {{#if controllers.currentUser.isSignedIn}}
         <a href="#">{{ controllers.currentUser.email }}</a>
+        &bull;
         <a href="#">Logout</a>
     {{else}}
         {{#link-to 'login'}}Login{{/link-to}}
+        &bull;
+        <a href="#">Register</a>
     {{/if}}
 </nav>
 

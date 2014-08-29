@@ -601,6 +601,7 @@ nav {
     text-align: right;
 }
 
+nav,
 nav a {
     color: #a6a6a6;
     font-size: 12px;
