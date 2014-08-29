@@ -41,7 +41,11 @@ export default Ember.ArrayController.extend({
 
             this.set('newTitle', '');
 
-            todo.save();
+            todo.save().then(function () {
+                console.log('saved');
+            }, function () { // Errors
+                console.log(arguments);
+            });
         },
 
         clearCompleted: function () {

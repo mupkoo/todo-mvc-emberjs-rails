@@ -25,7 +25,11 @@ export default Ember.ObjectController.extend({
 
         update: function () {
             this.set('isEditing', false);
-            this.get('content').save();
+            this.get('content').save().then(function () {
+                // Success
+            }, function () {
+                console.log(arguments);
+            });
         },
 
         destroy: function () {

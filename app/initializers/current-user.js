@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default {
     name: 'current-user',
-    after: 'store',
 
     initialize: function(container, app) {
         var login = container.lookup('controller:login'),
