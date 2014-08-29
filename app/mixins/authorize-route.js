@@ -17,7 +17,7 @@ export default Ember.Mixin.create({
         // Arguments - error, transition
         error: function (error) {
             if (error && error.status === 401) {
-                this.redirectToLogin();
+                return this.redirectToLogin();
             }
 
             // Let the event bubble

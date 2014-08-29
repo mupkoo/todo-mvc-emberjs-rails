@@ -13,6 +13,7 @@ export default {
         if (token) {
             Ember.$.get(TodoMvcENV.api + 'api/users/' + token + '.json').then(function (res) {
                 if (res.success) {
+                    login.setupToken();
                     currentUser.set('content', res.user);
                 }
 

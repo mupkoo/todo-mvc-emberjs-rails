@@ -13,8 +13,13 @@ export default Ember.Controller.extend({
 
 
     observeToken: function () {
+        this.setupToken();
         localStorage.token = this.get('token');
     }.observes('token'),
+
+    setupToken: function () {
+        Ember.$.ajaxSetup({ headers: { 'Auth-Token': this.get('token') } });
+    },
 
     resetErrorMessage: function () {
         this.set('errorMessage', null);
