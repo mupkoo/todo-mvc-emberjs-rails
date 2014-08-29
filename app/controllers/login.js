@@ -1,17 +1,15 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
+export default Ember.Controller.extend({
 
     needs: [ 'currentUser' ],
 
     // Initial data
-    model: {
-       token: localStorage.token,
+    token: localStorage.token,
 
-       email: '',
-       password: '',
-       errorMessage: null
-    },
+    email: '',
+    password: '',
+    errorMessage: null,
 
 
     observeToken: function () {
